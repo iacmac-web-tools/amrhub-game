@@ -37,6 +37,7 @@ body {
 
 h1 {
 	font-family: 'Gloria Hallelujah', cursive;
+	
 }
 
 
@@ -63,6 +64,8 @@ h1 {
 	width: 3.7rem;
 	margin: 0.2rem 0.2rem;
 	background: #141214;;
+	background: url("/img/amrhub_square_logo.svg");
+	background-size: 100% 100%;
 	font-size: 0;
 	color: #ffffff;
 	border-radius: 5px;
@@ -71,6 +74,18 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card img {
+	opacity: 0;
+}
+
+.deck .card.open img {
+	opacity: 1;
+}
+
+.deck .card.disabled.match img {
+	opacity: 1;
 }
 
 .deck .card.open {
@@ -185,6 +200,7 @@ h1 {
 	margin-top: 0;
 	color: #333;
 	font-family: Tahoma, Arial, sans-serif;
+	text-align: center;
 }
 
 .popup .close {

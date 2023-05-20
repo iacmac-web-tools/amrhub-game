@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Memory Game</title>
+    <title>AMRhub Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -14,7 +14,7 @@
 
     <div class="container">
         <header>
-            <h1>Memory Game</h1>
+            <h1>AMRhub Game</h1>
         </header>
 
         <section class="score-panel">
@@ -24,7 +24,7 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">0</span> Move(s)
+        	<span class="moves">0</span> ходов
 
             <div class="timer">
             </div>
@@ -35,70 +35,70 @@
         </section>
 
         <ul class="deck" id="card-deck">
-            <li class="card" type="virus">
-                <img src="img/virus.svg" alt="">
+            <li class="card" type="map">
+                <img src="img/map.svg" alt="">
             </li>
-            <li class="card" type="bac-lat">
-                <img src="img/bac-lat.svg" alt="">
+            <li class="card" type="cloud">
+                <img src="img/cloud.svg" alt="">
             </li>
-            <li class="card match" type="virus-dot">
-                <img src="img/virus-dot.svg" alt="">
+            <li class="card match" type="expert">
+                <img src="img/expert.svg" alt="">
             </li>
-            <li class="card" type="bac-smile" >
-                <img src="img/bac-smile.svg" alt="">
+            <li class="card" type="note" >
+                <img src="img/note.svg" alt="">
             </li>
-            <li class="card" type="bac-sun">
-                <img src="img/bac-sun.svg" alt="">
+            <li class="card" type="seq">
+                <img src="img/seq.svg" alt="">
             </li>
-            <li class="card match" type="bacteria">
-                <img src="img/bacteria.svg" alt="">
+            <li class="card match" type="team">
+                <img src="img/team.svg" alt="">
             </li>
-            <li class="card" type="plate">
-                <img src="img/plate.svg" alt="">
+            <li class="card" type="forum">
+                <img src="img/forum.svg" alt="">
             </li>
-            <li class="card" type="cells">
-                <img src="img/cells.svg" alt="">
+            <li class="card" type="cf">
+                <img src="img/cf.svg" alt="">
             </li>
-            <li class="card" type="virus">
-                <img src="img/virus.svg" alt="">
+            <li class="card" type="map">
+                <img src="img/map.svg" alt="">
             </li>
-            <li class="card" type="bac-lat">
-                <img src="img/bac-lat.svg" alt="">
+            <li class="card" type="cloud">
+                <img src="img/cloud.svg" alt="">
             </li>
-            <li class="card match" type="virus-dot">
-                <img src="img/virus-dot.svg" alt="">
+            <li class="card match" type="expert">
+                <img src="img/expert.svg" alt="">
             </li>
-            <li class="card" type="bac-smile" >
-                <img src="img/bac-smile.svg" alt="">
+            <li class="card" type="note" >
+                <img src="img/note.svg" alt="">
             </li>
-            <li class="card" type="bac-sun">
-                <img src="img/bac-sun.svg" alt="">
+            <li class="card" type="seq">
+                <img src="img/seq.svg" alt="">
             </li>
-            <li class="card match" type="bacteria">
-                <img src="img/bacteria.svg" alt="">
+            <li class="card match" type="team">
+                <img src="img/team.svg" alt="">
             </li>
-            <li class="card" type="plate">
-                <img src="img/plate.svg" alt="">
+            <li class="card" type="forum">
+                <img src="img/forum.svg" alt="">
             </li>
-            <li class="card" type="cells">
-                <img src="img/cells.svg" alt="">
+            <li class="card" type="cf">
+                <img src="img/cf.svg" alt="">
             </li>
         </ul>
 
         <div id="popup1" class="overlay">
             <div class="popup">
-                <h2>Congratulations 🎉</h2>
+                <h2>Поздравляем 🎉</h2>
                 <a class="close" href=# >×</a>
                 <div class="content-1">
-                    Congratulations you're a winner 🎉🎉
+                    Вы победитель 🎉🎉
                 </div>
                 <div class="content-2">
-                    <p>You made <span id=finalMove> </span> moves </p>
-                    <p>in <span id=totalTime> </span> </p>
-                    <p>Rating:  <span id=starRating></span></p>
+                    <p>Результат <span id=finalMove> </span> ходов </p>
+                    <p>за <span id=totalTime> </span> </p>
+                    <p>Рейтинг:  <span id=starRating></span></p>
                 </div>
                 <button id="play-again"onclick="playAgain()">
-                    Play again 😄</a>
+                    Сыграть еще раз 😄</a>
                 </button>
             </div>
         </div>
