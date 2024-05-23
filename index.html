@@ -1,40 +1,104 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>AMRhub Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
 
     <div class="container">
         <header>
-            <h1>AMRhub Game</h1>
+            <h1>Memo Game</h1>
         </header>
 
-        <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
+        <section style="display:inline-block;">
+            <span>Бактерии</span>
+            <label class="switch">
+                <input type="checkbox" id="checkboxMode"><span class="slider round hide-off"></a></span>
+            </label>
+            <span>AMRhub</span>
+        </section>
 
-        	<span class="moves">0</span> ходов
+        <br>
+
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves">0</span> ходов
 
             <div class="timer">
             </div>
 
             <div class="restart" onclick=startGame()>
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
-        <ul class="deck" id="card-deck">
+        <ul class="deck" id="bacteria-deck">
+            <li class="card" type="virus">
+                <img src="img/virus.svg" alt="">
+            </li>
+            <li class="card" type="bac-lat">
+                <img src="img/bac-lat.svg" alt="">
+            </li>
+            <li class="card match" type="virus-dot">
+                <img src="img/virus-dot.svg" alt="">
+            </li>
+            <li class="card" type="bac-smile" >
+                <img src="img/bac-smile.svg" alt="">
+            </li>
+            <li class="card" type="bac-sun">
+                <img src="img/bac-sun.svg" alt="">
+            </li>
+            <li class="card match" type="bacteria">
+                <img src="img/bacteria.svg" alt="">
+            </li>
+            <li class="card" type="plate">
+                <img src="img/plate.svg" alt="">
+            </li>
+            <li class="card" type="cells">
+                <img src="img/cells.svg" alt="">
+            </li>
+            <li class="card" type="virus">
+                <img src="img/virus.svg" alt="">
+            </li>
+            <li class="card" type="bac-lat">
+                <img src="img/bac-lat.svg" alt="">
+            </li>
+            <li class="card match" type="virus-dot">
+                <img src="img/virus-dot.svg" alt="">
+            </li>
+            <li class="card" type="bac-smile" >
+                <img src="img/bac-smile.svg" alt="">
+            </li>
+            <li class="card" type="bac-sun">
+                <img src="img/bac-sun.svg" alt="">
+            </li>
+            <li class="card match" type="bacteria">
+                <img src="img/bacteria.svg" alt="">
+            </li>
+            <li class="card" type="plate">
+                <img src="img/plate.svg" alt="">
+            </li>
+            <li class="card" type="cells">
+                <img src="img/cells.svg" alt="">
+            </li>
+        </ul>
+
+        <ul class="deck" id="amrhub-deck">
             <li class="card" type="map">
                 <img src="img/map.svg" alt="">
             </li>
@@ -44,7 +108,7 @@
             <li class="card match" type="expert">
                 <img src="img/expert.svg" alt="">
             </li>
-            <li class="card" type="note" >
+            <li class="card" type="note">
                 <img src="img/note.svg" alt="">
             </li>
             <li class="card" type="seq">
@@ -53,8 +117,8 @@
             <li class="card match" type="team">
                 <img src="img/team.svg" alt="">
             </li>
-            <li class="card" type="forum">
-                <img src="img/forum.svg" alt="">
+            <li class="card" type="book">
+                <img src="img/book.svg" alt="">
             </li>
             <li class="card" type="cf">
                 <img src="img/cf.svg" alt="">
@@ -68,7 +132,7 @@
             <li class="card match" type="expert">
                 <img src="img/expert.svg" alt="">
             </li>
-            <li class="card" type="note" >
+            <li class="card" type="note">
                 <img src="img/note.svg" alt="">
             </li>
             <li class="card" type="seq">
@@ -77,8 +141,8 @@
             <li class="card match" type="team">
                 <img src="img/team.svg" alt="">
             </li>
-            <li class="card" type="forum">
-                <img src="img/forum.svg" alt="">
+            <li class="card" type="book">
+                <img src="img/book.svg" alt="">
             </li>
             <li class="card" type="cf">
                 <img src="img/cf.svg" alt="">
@@ -88,16 +152,16 @@
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Поздравляем 🎉</h2>
-                <a class="close" href=# >×</a>
+                <a class="close" href=#>×</a>
                 <div class="content-1">
                     Вы победитель 🎉🎉
                 </div>
                 <div class="content-2">
                     <p>Результат <span id=finalMove> </span> ходов </p>
                     <p>за <span id=totalTime> </span> </p>
-                    <p>Рейтинг:  <span id=starRating></span></p>
+                    <p>Рейтинг: <span id=starRating></span></p>
                 </div>
-                <button id="play-again"onclick="playAgain()">
+                <button id="play-again" onclick="playAgain()">
                     Сыграть еще раз 😄</a>
                 </button>
             </div>
@@ -106,4 +170,5 @@
     </div>
     <script src="js/app.js"></script>
 </body>
+
 </html>

@@ -8,7 +8,7 @@ html {
 	box-sizing: inherit;
 }
 
-img { 
+img {
 	width: 75%;
 	height: 75%;
 	color: #141214;
@@ -24,7 +24,7 @@ body {
 
 body {
 	background: #ffffff;
-	font-family: 'Permanent Marker', cursive;
+	font-family: "Caveat", cursive;
 	font-size: 16px;
 }
 
@@ -36,15 +36,14 @@ body {
 }
 
 h1 {
-	font-family: 'Gloria Hallelujah', cursive;
-	
+	font-family: "Caveat", cursive;
+
 }
 
 
 /*
  * Styles for the deck of cards
  */
-
 
 .deck {
 	width: 85%;
@@ -184,7 +183,7 @@ h1 {
 	visibility: visible;
 	opacity: 1;
 }
-  
+
 .popup {
 	margin: 70px auto;
 	padding: 20px;
@@ -193,13 +192,13 @@ h1 {
 	width: 85%;
 	position: relative;
 	transition: all 5s ease-in-out;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: "Caveat", cursive;
 }
-  
+
 .popup h2 {
 	margin-top: 0;
 	color: #333;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: "Caveat", cursive;
 	text-align: center;
 }
 
@@ -241,7 +240,7 @@ h1 {
 	display: block;
 	margin: 0 auto;
 	width: 50%;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: "Caveat", cursive;
 	color: #ffffff;
 	border-radius: 5px;
 }
@@ -357,3 +356,66 @@ h1 {
 	}
 }
 
+
+/* TOGGLE SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*END OF TOGGLE SWITCH*/
